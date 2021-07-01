@@ -45,7 +45,7 @@ SetCapsLockState, AlwaysOff
 
 ; CapsLock Switcher
 ;--------------------------------------
-CapsLock & Ctrl::
+CapsLock & t::
 GetKeyState, CapsLockState, CapsLock, T
 if CapsLockState = D
     SetCapsLockState, AlwaysOff
@@ -286,16 +286,25 @@ CapsLock & Backspace::
     return
 
 
-; More delete options
-; CapsLock + s = delete word before
-;          + d = delete char before
-;          + f = delete char after
-;          + g = delete word after
+; Alternative modifiers
+; s => shift
+; d => Ctrl
+; f => Alt
 ;--------------------------------------
-CapsLock & s:: Send, ^{Backspace}
-CapsLock & d:: Send, {Backspace}
-CapsLock & f:: Send, {Del}
-CapsLock & g:: Send, ^{Del}
+CapsLock & s::Shift
+CapsLock & d::Ctrl
+CapsLock & f::Alt
+
+
+; More delete options
+; CapsLock + ,        = delete word before
+;          + /        = delete char before
+;          + Ctrl + / = delete char after
+;          + .        = delete word after
+;--------------------------------------
+CapsLock & ,:: Send ^{Backspace}
+CapsLock & -:: Send {Del}
+CapsLock & .:: Send ^{Del}
 
 
 ; CapsLock + p = PrintScreen

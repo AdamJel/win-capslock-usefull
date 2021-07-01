@@ -34,14 +34,14 @@ CapsLock + h/j/k/l  => arrows left/down/up/right, including some combos:
                        - CapsLock + Win (moving windows in Windows)
 CaspLock + n/m      => Home/End
 CaspLock + y/u      => PageUp/PageDown
-CaspLock + s/d/f/g  => Delete word-before/char-before/char-after/word-after
+CaspLock + </>/?    => Delete word-before/word-after/char-after/
 CapsLock + i/p      => Insert/PrintScreen
 CapsLock + 1/../0/= => F1/../F10/F12  (F11 TO-DO)
 CapsLock + w/e/r    => volume down/up/off
 ```
 
 Visualisation is better, right?
-![Picture of keymap](./drawio/keymap_transparent.png)
+![Picture of keymap](./drawio/keymap_transparent_v2.png)
 
 ## How to use this script?
 
