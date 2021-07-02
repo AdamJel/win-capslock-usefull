@@ -294,6 +294,7 @@ CapsLock & Backspace::
 CapsLock & s::Shift
 CapsLock & d::Ctrl
 CapsLock & f::Alt
+CapsLock & g::LWin
 
 
 ; More delete options
