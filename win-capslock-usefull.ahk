@@ -410,7 +410,20 @@ CapsLock & m::
 CapsLock & 1:: Send, {F1}
 CapsLock & 2:: Send, {F2}
 CapsLock & 3:: Send, {F3}
-CapsLock & 4:: Send, {F4}
+CapsLock & 4::
+    if GetKeyState("Shift") = 1 {
+        Send +{F4}
+        return
+    }
+    if GetKeyState("Ctrl") = 1 {
+        Send ^{F4}
+        return
+    }
+    if GetKeyState("Alt") = 1 {
+        Send !{F4}
+        return
+    }
+    Send, {F4}
 CapsLock & 5:: Send, {F5}
 CapsLock & 6:: Send, {F6}
 CapsLock & 7:: Send, {F7}
