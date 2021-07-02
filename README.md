@@ -41,7 +41,7 @@ CapsLock + w/e/r    => volume down/up/off
 ```
 
 Visualisation is better, right?
-![Picture of keymap](./drawio/keymap_transparent_v2.png)
+![Picture of keymap](./drawio/keymap_transparent_v3.png)
 
 ## How to use this script?
 
