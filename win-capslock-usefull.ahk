@@ -16,7 +16,9 @@
 ; CaspLock + y/u       : PageUp/PageDown
 ; CaspLock + s/d/f/g   : Delete word-before/char-before/char-after/word-after
 ; CapsLock + i/p       : Insert/PrintScreen
-; CapsLock + 1/../0/=  : F1/../F10/F12  (F11 TO-DO)
+; CapsLock + 1/../0/=  : F1/../F10/F12  (F11 TO-DO), supports:
+;                        - CapsLock + Ctrl + "="        : zoom in
+;                        - CapsLock + Ctrl + Shitf + "=": zoom out
 ; CapsLock + w/e/r     : volume down/up/off
 
 
@@ -432,7 +434,16 @@ CapsLock & 8:: Send, {F8}
 CapsLock & 9:: Send, {F9}
 CapsLock & 0:: Send, {F10}
 ; F11 TO-DO
-CapsLock & =:: Send, {F12}
+CapsLock & =::
+    if GetKeyState("Ctrl") = 1 {
+        if GetKeyState("Shift") = 1 {
+            Send ^{NumpadSub}
+            return
+        }
+        Send ^{NumpadAdd}
+        return
+    }
+    Send, {F12}
 
 
 ; CapsLock Media Controller
